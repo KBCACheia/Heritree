@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html manifest="offline.appcache">
+<head>
+	<title>HeriTree - Recife</title> 
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type='text/css' href="css/normalize.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.css" />
+	<link rel="stylesheet" type='text/css' href="css/leaflet.css" />
+	<link rel="stylesheet" type='text/css' href="css/app.css" />
+	
+	<script type='text/javascript'>
+		var isFirefoxOS = navigator.userAgent.toLowerCase().indexOf('firefox') > -1 && navigator.userAgent.toLowerCase().indexOf('mobile') > -1;
+		var isPhoneGap = 'connection' in navigator;
+	</script>
+
+	<!-- PHONEGAP 
+    <script type='text/javascript' src="cordova.js" charset="utf-8"></script>
+    <script type='text/javascript' src="backgroundService.js"></script>
+    <script type='text/javascript' src="vaiChoverService.js"></script>
+	<script type='text/javascript' src="cdv-plugin-fb-connect.js"></script>
+	<script type='text/javascript' src="facebook-js-sdk.js"></script>-->
+
+	<script type='text/javascript' src="js/jquery.js"></script>
+	<script type='text/javascript' src="js/jquery.mobile.js"></script>
+	<script type='text/javascript' src="js/jquery.csv.js"></script>
+	<script type='text/javascript' src="js/leaflet.js"></script>
+	<script type='text/javascript' src="js/maps.js"></script>
+	<script type='text/javascript' src="js/app.js"></script>
+	<script type='text/javascript' src="js/facebook.js"></script>
+</head> 
+<body> 
+	<div class="ui-loader-background"></div>
+
+	<!-- PAGES -->
+	<!-- Page Home -->
+	<div id="pageHome" data-role="page">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#dlgSobre" data-role="button" data-rel="dialog" data-transition="flip" data-icon="info" data-iconpos="notext">Sobre</a>
+			<h1 class="app-title">HeriTree - Recife</h1>
+			<a href="#dlgConfig" data-role="button" data-rel="dialog" data-transition="flip" data-icon="gear" data-iconpos="notext" style="display: none;">Preferências</a>
+		</div>
+		<div data-role="content">
+	        <div id="map" style=" width:100%; height:100%">			</div>
+		</div>
+	</div>
+	<!-- Page Information -->
+	<div id="pageInformation" data-role="page">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false">
+			<a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext">Voltar</a>
+			<h1 class="app-title">Árvore Tombada</h1>
+			
+		</div>
+        <div data-role="content">
+            <h2 id="treeName"></h2>
+			<div id="treeDescription"></div>
+        </div>
+	</div>
+	
+	<!-- DIALOGS -->
+		
+	<!-- Dialog Sobre -->
+	<div id="dlgSobre" data-role="dialog" data-rel="back">
+		<div data-role="header">
+	        <h1>Sobre</h1>
+	    </div>
+	    <div data-role="content">
+	        <div class="logo-heritree">
+	        	<!--<img src="images/vai_chover.png">-->
+	        </div>
+	        <h2>Desenvolvedor</h2>
+	        <div class="about-desc">
+				<img src="images/developer.png"><div>Diego Bonfim</div><br>
+				<img src="images/email.png"><div>diego@diegobonfim.com</div><br>
+				<img src="images/facebook.png"><div><a href="https://www.facebook.com/Diego.JBonfim">/Diego.JBonfim</a></div><br>
+				<img src="images/twitter.png"><div><a href="https://twitter.com/Diego_88">@Diego_88</a></div><br>
+				<img src="images/skype.png"><div>diegojbonfim</div><br>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "name": "HeriTree - Recife",
+    "description": "Descubra o nome das árvores tombadas no Recife!",
+    "developer": {
+        "name": "Diego Bonfim",
+        "url": "http://diegobonfim.com"
+    },
+    "launch_path": "/app/heritree/index.html",
+	"appcache_path": "/app/heritree/offline.appcache",
+    "installs_allowed_from": ["*"],
+    "default_locale": "pt",
+    "icons": {
+        "60": "/app/heritree/images/heritree_png_60.png",
+        "128": "/app/heritree/images/heritree_png_128.png"
+    }
+}
